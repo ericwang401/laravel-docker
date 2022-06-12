@@ -3,8 +3,6 @@ FROM ubuntu:22.04
 ENV TZ=UTC
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-COPY ./php.ini /usr/local/etc/php/php.ini
-
 RUN apt-get update
 RUN apt-get -y install software-properties-common curl sudo
 
